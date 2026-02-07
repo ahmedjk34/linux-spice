@@ -19,7 +19,7 @@ After using PySpice extensively in my graduate project, I realized there's a mas
 - **LTspice-inspired workflow** - Familiar schematic capture and analysis tools
 - **Powered by ngspice** - Leveraging the robust, open-source ngspice simulation engine
 - **Open source** - GPL v3, community-driven development
-```markdown
+
 ## Architecture
 
 ```
@@ -48,5 +48,4 @@ After using PySpice extensively in my graduate project, I realized there's a mas
 **GUI:** Qt 6  
 **Build:** CMake  
 **Platform:** Linux  
-**Dependencies:** None 
-```
+**Dependencies:** None
