@@ -19,11 +19,34 @@ After using PySpice extensively in my graduate project, I realized there's a mas
 - **LTspice-inspired workflow** - Familiar schematic capture and analysis tools
 - **Powered by ngspice** - Leveraging the robust, open-source ngspice simulation engine
 - **Open source** - GPL v3, community-driven development
+```markdown
+## Architecture
 
-## Planned Architecture
+```
+┌─────────────────────────────┐
+│         Qt 6 GUI            │
+│   Netlist Editor • Viewer   │
+└──────────────┬──────────────┘
+               │
+┌──────────────┴──────────────┐
+│      Netlist Parser         │
+│    SPICE format → IR        │
+└──────────────┬──────────────┘
+               │
+┌──────────────┴──────────────┐
+│       Circuit IR            │
+│   Nodes • Elements • Params │
+└──────────────┬──────────────┘
+               │
+┌──────────────┴──────────────┐
+│        Math Core            │
+│  Matrix solver • MNA        │
+└─────────────────────────────┘
+```
 
-### Tech Stack
-- **GUI Framework:** Qt 6.x (C++)
-- **Simulation Engine:** libngspice (C library)
-- **Language:** C++17
-- **Build System:** CMake
+**Language:** C++20  
+**GUI:** Qt 6  
+**Build:** CMake  
+**Platform:** Linux  
+**Dependencies:** None 
+```
